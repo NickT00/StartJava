@@ -83,5 +83,22 @@ public class VariablesTheme {
         num2 ^= num1;
         num1 ^= num2;
         System.out.println("        Число №1 = " + num1 + "  Число №2 = " + num2);
+
+        System.out.println("\n6. Вывод символов и их кодов");
+        char sign1 = '#';
+        char sign2 = '&';
+        char sign3 = '@';
+        char sign4 = '^';
+        char sign5 = '_';
+        int character1 = 35;
+        int character2 = 38;
+        int character3 = 64;
+        int character4 = 94;
+        int character5 = 95;
+        System.out.println("    " + character1 + " - " + sign1 
+                + "\n    " + character2 + " - " + sign2 
+                + "\n    " + character3 + " - " + sign3 
+                + "\n    " + character4 + " - " + sign4 
+                + "\n    " + character5 + " - " + sign5 );
     }
 }
