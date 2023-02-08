@@ -7,7 +7,7 @@ public class VariablesTheme {
         int memory = 4;
         long diskSpace = 120;
         float frequency = 2.81f;
-        double CashL3 = 2.0;
+        double cashL3 = 2.0;
         char typeOfSystem = 'W';
         boolean active = true;
         System.out.println("    Количество ядер  процессора - " + cores + ";\n"
@@ -15,7 +15,7 @@ public class VariablesTheme {
                 + "    Объем оперативной памяти - " + memory + " GB;\n"
                 + "    Объем жесткого диска - " + diskSpace + " GB;\n"
                 + "    Частота процессора - " + frequency + " GHz;\n"
-                + "    Объем кэша L3 - " + CashL3 + " MB;\n"
+                + "    Объем кэша L3 - " + cashL3 + " MB;\n"
                 + "    Тип операционной ситсемы - " + typeOfSystem + 
                 " (W - Windows, M - MacOS, L - Linux, O - Other);\n"
                 + "    Работает ли компютер? - " + active + " (true - Да, false - Нет);\n");
@@ -29,5 +29,59 @@ public class VariablesTheme {
         System.out.println("    Стоимость товаров без скидки = " + sumPurchase + " руб.\n"
                 + "    Сумма скидки = " + (int) discount + " %\n"
                 + "    Стоимость товаров со скидкой = " + (int) sumWithDiscount + " руб.");
+
+        System.out.println("\n3. Вывод слова JAVA\n" 
+                + "        J   a  v     v  a\n" 
+                + "        J  a a  v   v  a a\n"
+                + "    J  J  aaaaa  V V  aaaaa\n"
+                + "     JJ  a     a  V  a     a");
+
+        System.out.println("\n4. Вывод min и max значений целых числовых типов");
+        byte byteNum = 127;
+        short shortNum = 32_767;
+        int intNum = 2_147_483_647;
+        long longNum = 9_223_372_036_854_775_807L;
+        System.out.println("    byte:\n        " + byteNum);
+        byteNum++;
+        System.out.println("        " + byteNum);
+        byteNum--;
+        System.out.println("        " + byteNum);
+        System.out.println("    short:\n        " + shortNum);
+        shortNum++;
+        System.out.println("        " + shortNum);
+        shortNum--;
+        System.out.println("        " + shortNum);
+        System.out.println("    int:\n        " + intNum);
+        intNum++;
+        System.out.println("        " + intNum);
+        intNum--;
+        System.out.println("        " + intNum);
+        System.out.println("    long:\n        " + longNum);
+        longNum++;
+        System.out.println("        " + longNum);
+        longNum--;
+        System.out.println("        " + longNum);
+
+        System.out.println("\n5. Перестановка значений переменных");
+        int num1 = 2;
+        int num2 = 5;
+        System.out.println("    С помощью третьей переменной\n        Число №1 = " + num1
+                + "  Число №2 = " + num2);
+        int temp = num1;
+        num1 = num2;
+        num2 = temp;
+        System.out.println("        Число №1 = " + num1 + "  Число №2 = " + num2);
+        System.out.println("    С помощью арифметических операций\n        Число №1 = " + num1
+                + "  Число №2 = " + num2);
+        num1 += num2;
+        num2 = num1 - num2;
+        num1 -= num2;
+        System.out.println("        Число №1 = " + num1 + "  Число №2 = " + num2);
+        System.out.println("    С помощью побитовой операции\n        Число №1 = " + num1
+                + "  Число №2 = " + num2);
+        num1 ^= num2;
+        num2 ^= num1;
+        num1 ^= num2;
+        System.out.println("        Число №1 = " + num1 + "  Число №2 = " + num2);
     }
 }
