@@ -100,5 +100,18 @@ public class VariablesTheme {
                 + "\n    " + character3 + " - " + sign3 
                 + "\n    " + character4 + " - " + sign4 
                 + "\n    " + character5 + " - " + sign5 );
+
+        System.out.println("\n7. Вывод в консоль ASCII-арт Дюка");
+        sign1 = '/';
+        sign2 = '\\';
+        sign3 = '_';
+        sign4 = '(';
+        sign5 = ')';
+        System.out.println("        " + sign1 + sign2 
+                + "\n       " + sign1 + "  " + sign2 
+                + "\n      " + sign1 + sign3 + " " + sign4 + sign5 + sign2 
+                + "\n     " + sign1 + "      " + sign2 
+                //learn how to do this in a better way 
+                + "\n    " + sign1 + (3 * sign3) + sign1 + sign2 + (2 * sign3) + sign2); 
     }
 }
