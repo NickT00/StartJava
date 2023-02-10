@@ -109,9 +109,26 @@ public class VariablesTheme {
         sign5 = ')';
         System.out.println("        " + sign1 + sign2 
                 + "\n       " + sign1 + "  " + sign2 
-                + "\n      " + sign1 + sign3 + " " + sign4 + sign5 + sign2 
+                + "\n      " + sign1 + sign3 + sign4 + " " + sign5 + sign2 
                 + "\n     " + sign1 + "      " + sign2 
-                //learn how to do this in a better way 
-                + "\n    " + sign1 + (3 * sign3) + sign1 + sign2 + (2 * sign3) + sign2); 
+                + "\n    " + sign1 + sign3 + sign3 + sign3 + sign3 + sign1 + sign2 + sign3 + sign3 
+                + sign2);
+
+        System.out.println("\n8. Вывод количества сотен, десятков и единиц числа");
+        int num = 123;
+        int hundreds = num / 100;
+        int dozens = (num % 100) / 10;
+        int units = (num % 100) % 10;
+        System.out.println("    Число " + num + " содержит:\n        " + hundreds 
+                + " сотен\n        " + dozens + " десятков\n        " + units 
+                + " единиц\n    Сумма его цифр = " + (hundreds + dozens + units) 
+                + "\n    Произведение = " + (hundreds * dozens * units));
+
+        System.out.println("\n9. Вывод времени");
+        num = 86399;
+        int seconds = num % 60;
+        int minutes = (num / 60) % 60;
+        int hours = num / 3600;
+        System.out.println("    " + hours + ":" + minutes + ":" + seconds);
     }
 }
