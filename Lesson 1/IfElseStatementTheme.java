@@ -75,15 +75,89 @@ public class IfElseStatementTheme {
         } else {
             if(ones1 == ones2) {
                 System.out.println(ones1 + " is equal," + " digits of the number is " + 1);
-            } else {}
+            }
             if(tens1 == tens2) {
                 System.out.println(tens1 + " is equal," + " digits of the number is " + 2);
-            } else {}
+            }
             if(hundreds1 == hundreds2) {
                 System.out.println(hundreds1 + " is equal," + " digits of the number is " + 3);
-            } else {}
+            }
         }
 
         System.out.println("\n5. Определение символа по его коду");
+        char character = '\u0057';
+        if(character >= 'A' && character <= 'Z' || character >= 'a' && character <= 'z') {
+            if(character >= 'A' && character <= 'Z') {
+                System.out.println(character + " is a capital letter");
+            } else {
+                System.out.println(character + " is a small letter");
+            }
+        } else if(character >= '0' & character <= '9') {
+            System.out.println(character + " is a digit");
+        } else {
+            System.out.println(character + " is not a digit or a letter");
+        }
+
+        System.out.println("\n6. Подсчет суммы вклада и начисленных банком %");
+        double deposit = 300_000;
+        double depositInterest;
+        if(deposit < 100_000) {
+            depositInterest = 0.05;
+        } else if(deposit > 300_000) {
+            depositInterest = 0.1;
+        } else {
+            depositInterest = 0.07;
+        }
+        System.out.println("Deposit amount is " + (int) deposit + " RUB\nDeposit interest is " 
+                + (int) (depositInterest * 100) + "%\n" + "Grand total is " 
+                + (int) (deposit += deposit * depositInterest) + " RUB");
+
+        System.out.println("\n7. Определение оценки по предметам");
+        int historyScore = 59;
+        int programmingScore = 91;
+        int historyGrade;
+        int programmingGrade;
+        if(historyScore <= 60) {
+            historyGrade = 2;
+        } else if(historyScore > 91) {
+            historyGrade = 5;
+        } else if(historyScore > 73) {
+            historyGrade = 4;
+        } else {
+            historyGrade = 3;
+        }
+        if(programmingScore <= 60) {
+            programmingGrade = 2;
+        } else if(programmingScore > 91) {
+            programmingGrade = 5;
+        } else if(programmingScore > 73) {
+            programmingGrade = 4;
+        } else {
+            programmingGrade = 3;
+        }
+        System.out.println(historyGrade + " in history\n" + programmingGrade + " in programming\n" 
+                + ((historyGrade + programmingGrade) / 2) + " - average grade\n" 
+                + ((historyScore + programmingScore) / 2) + "% - average score\n");
+
+        System.out.println("\n8. Расчет прибыли за год");
+        int rent = 5000;
+        int profit = 13000;
+        int costPrice = 9000;
+        int annualProfit = (profit - rent - costPrice) * 12;
+        if(annualProfit > 0) {
+            System.out.println("Прибыль за год: +" + annualProfit + " руб.");
+        } else {
+            System.out.println("Прибыль за год: " + annualProfit + " руб.");
+        }
+
+        System.out.println("\n9. Подсчет количества банкнот");
+        int money = 567;
+        int ones = 50;
+        int tens = 5;
+        int hundreds = 10;
+        int requiredOnes = money % 110 % 10;
+        int requiredTens = (money % 100 - requiredOnes) / 10;
+        int requiredHundreds = money / 100;
+        if(requiredHundreds > hundreds) {}
     }
 }
