@@ -151,13 +151,34 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n9. Подсчет количества банкнот");
-        int money = 567;
-        int ones = 50;
-        int tens = 5;
-        int hundreds = 10;
+        int money = 400;
+        int ones = 49;
+        int tens = 12;
+        int hundreds = 4;
         int requiredOnes = money % 110 % 10;
         int requiredTens = (money % 100 - requiredOnes) / 10;
         int requiredHundreds = money / 100;
-        if(requiredHundreds > hundreds) {}
     }
 }
+
+
+        /*if(ones + 10 * tens + 100 * hundreds < money) {
+            System.out.println("The cash machine doesn't have enough money");
+        } else {
+            if(money % 100 == 0) {
+                int money1 = money / 100;
+                System.out.println(money1);
+            } else {
+                int amountHundreds = money / 100;
+                money -= hundreds * 100;
+                if(money % 10 == 0) {
+                   money /= tens * 10;
+                   System.out.println(amountHundreds + " " + money);
+                } else {
+                   int amountTens = money / 10;
+                  money -= tens * 10;
+                  System.out.println(amountHundreds + " " + amountTens + " " + ones);
+                }
+            }
+        }
+        /*
