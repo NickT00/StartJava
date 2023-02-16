@@ -64,5 +64,23 @@ public class CyclesTheme {
             for(int k = 0; k <= (5 - j); k++)
                 System.out.printf("%4d", 0);
         }
+
+        System.out.println("\n5. Проверка количества двоек на четность/нечетность");
+        num = 3_242_592;
+        int check;
+        j = 0;
+        int tempNum = num;
+        while(tempNum > 0) {
+            check = tempNum % 10;
+            if(check == 2) {
+                j++;
+            }
+            tempNum /= 10;
+        }
+        if(j % 2 == 0) {
+            System.out.println("Number " + num + " contains " + j + " (even) amount of twos");
+        } else {
+            System.out.println("Number " + num + " contains " + j + " (odd) amount of twos");
+        }
     }
 }
