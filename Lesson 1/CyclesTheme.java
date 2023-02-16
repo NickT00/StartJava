@@ -60,10 +60,9 @@ public class CyclesTheme {
                 System.out.printf("%4d%n", i);
             }
         }
-        if(j < 5) {
-            for(int k = 0; k < j; k++)
+        if(j < 5 & j != 1) {
+            for(int k = 0; k <= (5 - j); k++)
                 System.out.printf("%4d", 0);
         }
-
     }
 }
