@@ -12,7 +12,7 @@ public class CyclesTheme {
             }
             num++;
         } while(num == 21);
-        System.out.println("In the interval [" + num + ", 21] sum of even numbers = " 
+        System.out.println("In the interval [-10, 21] sum of even numbers = " 
                 + even + ", but odd numbers = " + odd);
 
         System.out.println("\n2. Вывод чисел в интервале (min и max) в порядке убывания");
@@ -38,5 +38,32 @@ public class CyclesTheme {
         for(int i = max; i >= min; i--) {
             System.out.print(i + " ");
         }
+
+        System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр");
+        num = 1234;
+        int sumDigits = 0;
+        while(num > 0) {
+            System.out.print(num % 10);
+            sumDigits += num % 10;
+            num /= 10;
+        }
+        System.out.println("\n" + sumDigits);
+
+        System.out.println("\n4. Вывод чисел на консоль в несколько строк");
+        int j = 1;
+        for(int i = 1; i < 24; i += 2) {
+            if(j < 5) {
+                System.out.printf("%4d", i);
+                j++;
+            } else if (j == 5) {
+                j = 1;
+                System.out.printf("%4d%n", i);
+            }
+        }
+        if(j < 5) {
+            for(int k = 0; k < j; k++)
+                System.out.printf("%4d", 0);
+        }
+
     }
 }
