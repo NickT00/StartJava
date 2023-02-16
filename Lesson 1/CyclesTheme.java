@@ -116,5 +116,14 @@ public class CyclesTheme {
             symbols++;
             stringLength++;
         } while();*/
+
+        System.out.println("\n7. Отображение ASCII-символов");
+        System.out.println("Dec" + " Char");
+        for(int i = 1; i < 48; i += 2) {
+            System.out.println(i + " " + (char) i);
+        }
+        for(int i = 98; i < 123; i += 2) {
+            System.out.println(i + " " + (char) i);
+        }
     }
 }
