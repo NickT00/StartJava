@@ -50,37 +50,71 @@ public class CyclesTheme {
         System.out.println("\n" + sumDigits);
 
         System.out.println("\n4. Вывод чисел на консоль в несколько строк");
-        int j = 1;
+        int counter = 1;
         for(int i = 1; i < 24; i += 2) {
-            if(j < 5) {
+            if(counter < 5) {
                 System.out.printf("%4d", i);
-                j++;
-            } else if (j == 5) {
-                j = 1;
+                counter++;
+            } else if (counter == 5) {
+                counter = 1;
                 System.out.printf("%4d%n", i);
             }
         }
-        if(j < 5 & j != 1) {
-            for(int k = 0; k <= (5 - j); k++)
+        if(counter < 5 & counter != 1) {
+            for(int k = 0; k <= (5 - counter); k++)
                 System.out.printf("%4d", 0);
         }
 
         System.out.println("\n5. Проверка количества двоек на четность/нечетность");
         num = 3_242_592;
         int check;
-        j = 0;
+        int twos = 0;
         int tempNum = num;
         while(tempNum > 0) {
             check = tempNum % 10;
             if(check == 2) {
-                j++;
+                twos++;
             }
             tempNum /= 10;
         }
-        if(j % 2 == 0) {
-            System.out.println("Number " + num + " contains " + j + " (even) amount of twos");
+        if(twos % 2 == 0) {
+            System.out.println("Number " + num + " contains " + twos 
+                    + " (even) amount of twos");
         } else {
-            System.out.println("Number " + num + " contains " + j + " (odd) amount of twos");
+            System.out.println("Number " + num + " contains " + twos 
+                    + " (odd) amount of twos");
         }
+
+        System.out.println("\n6. Отображение фигур в консоли");
+        for(int i = 0; i < 5; i++) {
+            for(int j = 0; j < 10; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+        int strings = 5;
+        int stringLength = 5;
+        while(strings != 0) {
+            while(stringLength != 0) {
+                System.out.print("#");
+                stringLength--;
+            }
+            System.out.println("");
+            strings--;
+            stringLength = strings;
+        }
+        /*strings = 5;
+        stringLength = 3;
+        int symbols = 1;
+        do {
+            
+            do {
+                System.out.print("$");
+                
+            } while(symbols == stringLength);
+            System.out.println("");
+            symbols++;
+            stringLength++;
+        } while();*/
     }
 }
