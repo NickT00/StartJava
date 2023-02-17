@@ -151,17 +151,13 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n9. Подсчет количества банкнот");
-        int money = 400;
-        int ones = 49;
-        int tens = 12;
-        int hundreds = 4;
+        int money = 567;
+        int ones = 50;
+        int tens = 5;
+        int hundreds = 10;
         int requiredOnes = money % 110 % 10;
         int requiredTens = (money % 100 - requiredOnes) / 10;
         int requiredHundreds = money / 100;
-    }
-}
-
-
         /*if(ones + 10 * tens + 100 * hundreds < money) {
             System.out.println("The cash machine doesn't have enough money");
         } else {
@@ -180,5 +176,6 @@ public class IfElseStatementTheme {
                   System.out.println(amountHundreds + " " + amountTens + " " + ones);
                 }
             }
-        }
-        /*
+        }*/
+    }
+}
