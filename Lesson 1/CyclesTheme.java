@@ -103,19 +103,20 @@ public class CyclesTheme {
             strings--;
             stringLength = strings;
         }
-        /*strings = 5;
-        stringLength = 3;
-        int symbols = 1;
+
+        // Doesn't work, cannot make reverse outprint
+        strings = 1;
+        int symbols;
         do {
-            
+            symbols = 1;
             do {
                 System.out.print("$");
-                
-            } while(symbols == stringLength);
+                symbols++;
+            } while(symbols <= strings);
             System.out.println("");
-            symbols++;
-            stringLength++;
-        } while();*/
+            strings++;
+        } while(strings <= 3);
+        // // // // // // //
 
         System.out.println("\n7. Отображение ASCII-символов");
         System.out.println("Dec" + " Char");
@@ -124,6 +125,48 @@ public class CyclesTheme {
         }
         for(int i = 98; i < 123; i += 2) {
             System.out.println(i + " " + (char) i);
+        }
+
+        System.out.println("\n8. Проверка, является ли число палиндромом");
+        num = 1_234_321;
+        int reverseNum = 0;
+        tempNum = num;
+        int reverseTemp = 0;
+        while(num > 0) {
+            reverseTemp = num % 10;
+            reverseNum = (reverseNum * 10) + reverseTemp;
+            num /= 10;
+        }
+        if(tempNum == reverseNum) {
+            System.out.println("The Number " + tempNum + " is a polindrom");
+        } else {
+            System.out.println("The Number " + tempNum + " is not a polindrom");
+        }
+
+        System.out.println("\n9. Определение, является ли число счастливым");
+        num = 837_990;
+        int firstDigits = num % 1000;
+        int lastDigits = num / 1000;
+        int tempFirstDigits = firstDigits;
+        int tempLastDigits = lastDigits;
+        int sum1 = 0;
+        int sum2 = 0;
+        int digit1;
+        int digit2;
+        for(int i = 0; i < 3; i++) {
+            digit1 = firstDigits % 10;
+            firstDigits /= 10;
+            sum1 += digit1;
+            digit2 = lastDigits % 10;
+            lastDigits /= 10;
+            sum2 += digit2;
+        }
+        System.out.println("Sum of the digits " + tempFirstDigits + " = " + sum1 
+                + "\nSum of the digits " + tempLastDigits + " = " + sum2);
+        if(sum1 == sum2) {
+            System.out.println("This number is lucky");
+        } else {
+            System.out.println("This number is not lucky");
         }
     }
 }
