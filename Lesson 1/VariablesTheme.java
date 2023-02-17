@@ -41,14 +41,14 @@ public class VariablesTheme {
         short shortNum = 32_767;
         int intNum = 2_147_483_647;
         long longNum = 9_223_372_036_854_775_807L;
-        System.out.println("    byte:\n        " + byteNum + "\n        " + (byteNum += 1) 
-                + "\n        " + (byteNum -= 1));
-        System.out.println("    short:\n        " + shortNum + "\n        " + (shortNum += 1) 
-                + "\n        " + (shortNum -= 1));
-        System.out.println("    int:\n        " + intNum + "\n        " + (intNum += 1) 
-                + "\n        " + (intNum -= 1));
-        System.out.println("    long:\n        " + longNum + "\n        " + (longNum += 1) 
-                + "\n        " + (longNum -= 1));
+        System.out.println("    byte:\n        " + byteNum + "\n        " + (byteNum++) 
+                + "\n        " + (byteNum--));
+        System.out.println("    short:\n        " + shortNum + "\n        " + (shortNum++) 
+                + "\n        " + (shortNum--));
+        System.out.println("    int:\n        " + intNum + "\n        " + (intNum++) 
+                + "\n        " + (intNum--));
+        System.out.println("    long:\n        " + longNum + "\n        " + (longNum++) 
+                + "\n        " + (longNum--));
 
         System.out.println("\n5. Перестановка значений переменных");
         int num1 = 2;
