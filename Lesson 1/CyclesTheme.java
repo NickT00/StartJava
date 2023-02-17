@@ -104,7 +104,7 @@ public class CyclesTheme {
             stringLength = strings;
         }
 
-        // Doesn't work, cannot make reverse outprint
+        /* Doesn't work, cannot make reverse outprint
         strings = 1;
         int symbols;
         do {
@@ -115,8 +115,7 @@ public class CyclesTheme {
             } while(symbols <= strings);
             System.out.println("");
             strings++;
-        } while(strings <= 3);
-        // // // // // // //
+        } while(strings <= 3);*/
 
         System.out.println("\n7. Отображение ASCII-символов");
         System.out.println("Dec" + " Char");
@@ -167,6 +166,33 @@ public class CyclesTheme {
             System.out.println("This number is lucky");
         } else {
             System.out.println("This number is not lucky");
+        }
+
+        System.out.println("\n10. Вывод таблицы умножения Пифагора");
+        System.out.println("\n           ТАБЛИЦА   ПИФАГОРА\n");
+        for(int i = 1; i <= 10; i++) {
+            for(int j = 1; j <= 9; j++) {
+                if(i == 1) {
+                    if(j == 1) {
+                        System.out.printf("%5s", "|");
+                    } else {
+                        System.out.printf("%4d", i * j);
+                    }
+                } else if(i == 2) { 
+                    System.out.printf("%s", "____");
+                } else if(i == 3){
+                    if(j == 2) {
+                        System.out.printf("%s", "|");
+                    }
+                    System.out.printf("%4d", (i - 1) * j);
+                } else {
+                    if(j == 2) {
+                        System.out.printf("%s", "|");
+                    }
+                    System.out.printf("%4d", (i - 1) * j);
+                }
+            }
+            System.out.println("");
         }
     }
 }
