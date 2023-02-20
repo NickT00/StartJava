@@ -2,7 +2,7 @@ public class IfElseStatementTheme {
     public static void main(String[] args) {
         System.out.println("1. Перевод псевдокода на язык Java");
         int age = 10;
-        boolean isSexMale = true;
+        boolean maleGender = true;
         double height = 1.70;
 
         if(age > 20) {
@@ -10,7 +10,7 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Your age is 20 or less");
         }
-        if(!isSexMale) {
+        if(!maleGender) {
             System.out.println("You are a woman");
         } else {
             System.out.println("You are a man");
