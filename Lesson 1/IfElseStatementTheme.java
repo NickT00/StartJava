@@ -63,10 +63,10 @@ public class IfElseStatementTheme {
         System.out.println("\n4. Поиск одинаковых цифр в числах");
         num1 = 555;
         num2 = 223;
-        int ones1 = num1 % 110 % 10;
-        int ones2 = num2 % 110 % 10;
-        int tens1 = (num1 % 100 - ones1) / 10;
-        int tens2 = (num2 % 100 - ones2) / 10;
+        int ones1 = num1 % 10;
+        int ones2 = num2 % 10;
+        int tens1 = num1 % 100 / 10;
+        int tens2 = num2 % 100 / 10;
         int hundreds1 = num1 / 100;
         int hundreds2 = num2 / 100;
         System.out.println("We have a number " + num1 + " and a number " + num2);
