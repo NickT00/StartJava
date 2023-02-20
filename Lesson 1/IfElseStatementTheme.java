@@ -98,13 +98,11 @@ public class IfElseStatementTheme {
 
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %");
         double deposit = 300_000;
-        double depositInterest;
+        double depositInterest = 0.07;
         if(deposit < 100_000) {
             depositInterest = 0.05;
         } else if(deposit > 300_000) {
             depositInterest = 0.1;
-        } else {
-            depositInterest = 0.07;
         }
         System.out.println("Deposit amount is " + (int) deposit + " RUB\nDeposit interest is " 
                 + (int) (depositInterest * 100) + "%\n" + "Grand total is " 
