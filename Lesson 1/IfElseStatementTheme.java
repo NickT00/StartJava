@@ -111,20 +111,16 @@ public class IfElseStatementTheme {
         System.out.println("\n7. Определение оценки по предметам");
         int historyScore = 59;
         int programmingScore = 91;
-        int historyGrade;
-        int programmingGrade;
-        if(historyScore <= 60) {
-            historyGrade = 2;
-        } else if(historyScore > 91) {
+        int historyGrade = 2;
+        int programmingGrade = 2;
+        if(historyScore > 91) {
             historyGrade = 5;
         } else if(historyScore > 73) {
             historyGrade = 4;
         } else {
             historyGrade = 3;
         }
-        if(programmingScore <= 60) {
-            programmingGrade = 2;
-        } else if(programmingScore > 91) {
+        if(programmingScore > 91) {
             programmingGrade = 5;
         } else if(programmingScore > 73) {
             programmingGrade = 4;
