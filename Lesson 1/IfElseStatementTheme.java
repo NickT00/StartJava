@@ -86,12 +86,10 @@ public class IfElseStatementTheme {
 
         System.out.println("\n5. Определение символа по его коду");
         char character = '\u0057';
-        if(character >= 'A' && character <= 'Z' || character >= 'a' && character <= 'z') {
-            if(character >= 'A' && character <= 'Z') {
-                System.out.println(character + " is a capital letter");
-            } else {
-                System.out.println(character + " is a small letter");
-            }
+        if(character >= 'A' && character <= 'Z') {
+            System.out.println(character + " is a capital letter");
+        } else if(character >= 'a' && character <= 'z') {
+            System.out.println(character + " is a small letter");
         } else if(character >= '0' & character <= '9') {
             System.out.println(character + " is a digit");
         } else {
