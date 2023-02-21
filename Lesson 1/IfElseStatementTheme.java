@@ -147,27 +147,44 @@ public class IfElseStatementTheme {
         int ones = 50;
         int tens = 5;
         int hundreds = 10;
-        int requiredOnes = money % 110 % 10;
-        int requiredTens = (money % 100 - requiredOnes) / 10;
+        int requiredOnes = money % 10;
+        int requiredTens = money % 100 / 10;
         int requiredHundreds = money / 100;
-        /*if(ones + 10 * tens + 100 * hundreds < money) {
-            System.out.println("The cash machine doesn't have enough money");
+        int dispensOnes = requiredOnes;
+        int dispensTens = requiredTens;
+        int dispensHundreds = requiredHundreds;
+        if(ones < requiredOnes || tens >= requiredTens & hundreds < requiredHundreds
+                && (ones - requiredOnes) + (tens - requiredTens) * 10 < (requiredHundreds 
+                - hundreds) * 100 || tens < requiredTens & hundreds >= requiredHundreds 
+                && (ones - requiredOnes) < (requiredTens - tens) * 10 || tens < requiredTens 
+                & hundreds < requiredHundreds && (ones - requiredOnes) < (requiredTens 
+                - tens) * 10 + (requiredHundreds - hundreds) * 100) {
+            System.out.println("Banknotes is not enough");
         } else {
-            if(money % 100 == 0) {
-                int money1 = money / 100;
-                System.out.println(money1);
-            } else {
-                int amountHundreds = money / 100;
-                money -= hundreds * 100;
-                if(money % 10 == 0) {
-                   money /= tens * 10;
-                   System.out.println(amountHundreds + " " + money);
+            if(tens >= requiredTens & hundreds < requiredHundreds) {
+                if((tens - requiredTens) / 10 >= requiredHundreds - hundreds) {
+                    dispensTens = requiredTens + (requiredHundreds - hundreds) * 10;
+                    dispensHundreds = hundreds;
                 } else {
-                   int amountTens = money / 10;
-                  money -= tens * 10;
-                  System.out.println(amountHundreds + " " + amountTens + " " + ones);
+                    dispensOnes = requiredOnes + (requiredHundreds - hundreds) * 100 
+                            - (tens - requiredTens) * 10;
+                    dispensTens = tens;
+                    dispensHundreds = hundreds;
                 }
+            } else if(tens < requiredTens & hundreds >= requiredHundreds) {
+                dispensOnes = requiredOnes + (requiredTens - tens) * 10;
+                dispensTens = tens;
+            } else {
+                dispensOnes = requiredOnes + (requiredTens - tens) * 10 
+                        + (requiredHundreds - hundreds) * 100;
+                dispensTens = tens;
+                dispensHundreds = hundreds;
             }
-        }*/
+            System.out.println("Denominations of banknotes:\nHundreds - " + dispensHundreds 
+                    + "\nTens - " + dispensTens + "\nOnes - " + dispensOnes 
+                    + "\nRequired banknotes:\nHundreds - " + requiredHundreds 
+                    + "\nTens - " + requiredTens + "\nOnes - " + requiredOnes 
+                    + "\nAmount of money - " + money);
+        }
     }
 }
