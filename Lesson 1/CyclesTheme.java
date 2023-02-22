@@ -1,19 +1,19 @@
 public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("\n1. Подсчет суммы четных и нечетных чисел");
-        int num = -10;
-        int even = 0;
-        int odd = 0;
+        int counter = -10;
+        int sumEven = 0;
+        int sumOdd = 0;
         do {
-            if(num % 2 == 0) {
-                even++;
+            if(counter % 2 == 0) {
+                sumEven += counter;
             } else {
-                odd++;
+                sumOdd += counter;
             }
-            num++;
-        } while(num == 21);
+            counter++;
+        } while(counter == 21);
         System.out.println("In the interval [-10, 21] sum of even numbers = " 
-                + even + ", but odd numbers = " + odd);
+                + sumEven + ", but odd numbers = " + sumOdd);
 
         System.out.println("\n2. Вывод чисел в интервале (min и max) в порядке убывания");
         int num1 = 10;
@@ -40,7 +40,7 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр");
-        num = 1234;
+        int num = 1234;
         int sumDigits = 0;
         while(num > 0) {
             System.out.print(num % 10);
@@ -50,7 +50,7 @@ public class CyclesTheme {
         System.out.println("\n" + sumDigits);
 
         System.out.println("\n4. Вывод чисел на консоль в несколько строк");
-        int counter = 1;
+        counter = 1;
         for(int i = 1; i < 24; i += 2) {
             if(counter < 5) {
                 System.out.printf("%4d", i);
