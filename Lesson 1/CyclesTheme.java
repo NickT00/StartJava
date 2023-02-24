@@ -19,23 +19,19 @@ public class CyclesTheme {
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
-        int max;
-        int min;
-        if(num1 > num2 & num1 > num3) {
-            max = num1;
-        } else if(num2 > num3 & num2 > num1) {
+        int max = num1;
+        int min = num2;
+        if(num2 > num3 & num2 > num1) {
             max = num2;
-        } else {
+        } else if(num3 > num1) {
             max = num3;
         }
         if(num1 < num2 & num1 < num3) {
             min = num1;
-        } else if(num2 < num3 & num2 < num1) {
-            min = num2;
-        } else {
+        } else if(num3 < num2) {
             min = num3;
         }
-        for(int i = max; i >= min; i--) {
+        for(int i = max - 1; i > min; i--) {
             System.out.print(i + " ");
         }
 
