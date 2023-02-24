@@ -64,21 +64,19 @@ public class CyclesTheme {
 
         System.out.println("\n5. Проверка количества двоек на четность/нечетность");
         num = 3_242_592;
-        int check;
-        int twos = 0;
-        int tempNum = num;
-        while(tempNum > 0) {
-            check = tempNum % 10;
-            if(check == 2) {
-                twos++;
+        int countTwos = 0;
+        int copyNum = num;
+        while(copyNum > 0) {
+            if(copyNum % 10 == 2) {
+                countTwos++;
             }
-            tempNum /= 10;
+            copyNum /= 10;
         }
-        if(twos % 2 == 0) {
-            System.out.println("Number " + num + " contains " + twos 
+        if(countTwos % 2 == 0) {
+            System.out.println("Number " + num + " contains " + countTwos 
                     + " (even) amount of twos");
         } else {
-            System.out.println("Number " + num + " contains " + twos 
+            System.out.println("Number " + num + " contains " + countTwos 
                     + " (odd) amount of twos");
         }
 
@@ -126,17 +124,17 @@ public class CyclesTheme {
         System.out.println("\n8. Проверка, является ли число палиндромом");
         num = 1_234_321;
         int reverseNum = 0;
-        tempNum = num;
+        copyNum = num;
         int reverseTemp = 0;
         while(num > 0) {
             reverseTemp = num % 10;
             reverseNum = (reverseNum * 10) + reverseTemp;
             num /= 10;
         }
-        if(tempNum == reverseNum) {
-            System.out.println("The Number " + tempNum + " is a polindrom");
+        if(copyNum == reverseNum) {
+            System.out.println("The Number " + copyNum + " is a polindrom");
         } else {
-            System.out.println("The Number " + tempNum + " is not a polindrom");
+            System.out.println("The Number " + copyNum + " is not a polindrom");
         }
 
         System.out.println("\n9. Определение, является ли число счастливым");
