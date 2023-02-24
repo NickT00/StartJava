@@ -37,10 +37,12 @@ public class CyclesTheme {
 
         System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр");
         int num = 1234;
+        int digit;
         int sumDigits = 0;
         while(num > 0) {
-            System.out.print(num % 10);
-            sumDigits += num % 10;
+            digit = num % 10;
+            System.out.print(digit);
+            sumDigits += digit;
             num /= 10;
         }
         System.out.println("\n" + sumDigits);
