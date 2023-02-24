@@ -50,16 +50,15 @@ public class CyclesTheme {
         System.out.println("\n4. Вывод чисел на консоль в несколько строк");
         counter = 1;
         for(int i = 1; i < 24; i += 2) {
-            if(counter < 5) {
-                System.out.printf("%4d", i);
-                counter++;
-            } else if (counter == 5) {
+            System.out.printf("%4d", i);
+            counter++;
+            if(counter > 5) {
+                System.out.println();
                 counter = 1;
-                System.out.printf("%4d%n", i);
             }
         }
         if(counter < 5 & counter != 1) {
-            for(int k = 0; k <= (5 - counter); k++)
+            for(int i = 0; i <= (5 - counter); i++)
                 System.out.printf("%4d", 0);
         }
 
