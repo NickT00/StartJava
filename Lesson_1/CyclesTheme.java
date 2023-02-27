@@ -86,40 +86,40 @@ public class CyclesTheme {
             for(int j = 0; j < 10; j++) {
                 System.out.print("*");
             }
-            System.out.println("");
+            System.out.println();
         }
-        int strings = 5;
+        int amountStrings = 5;
         int stringLength = 5;
-        while(strings != 0) {
+        while(amountStrings != 0) {
             while(stringLength != 0) {
                 System.out.print("#");
                 stringLength--;
             }
-            System.out.println("");
-            strings--;
-            stringLength = strings;
+            System.out.println();
+            amountStrings--;
+            stringLength = amountStrings;
         }
 
         /* Doesn't work, cannot make reverse outprint
-        strings = 1;
+        amountStrings = 1;
         int symbols;
         do {
             symbols = 1;
             do {
                 System.out.print("$");
                 symbols++;
-            } while(symbols <= strings);
+            } while(symbols <= amountStrings);
             System.out.println("");
-            strings++;
-        } while(strings <= 3);*/
+            amountStrings++;
+        } while(amountStrings <= 3);*/
 
         System.out.println("\n7. Отображение ASCII-символов");
-        System.out.println("Dec" + " Char");
+        System.out.println("Dec Char");
         for(int i = 1; i < 48; i += 2) {
-            System.out.println(i + " " + (char) i);
+            System.out.printf("%3d %2c%n", i, (char) i);
         }
         for(int i = 98; i < 123; i += 2) {
-            System.out.println(i + " " + (char) i);
+            System.out.printf("%3d %2c%n", i, (char) i);
         }
 
         System.out.println("\n8. Проверка, является ли число палиндромом");
@@ -188,7 +188,7 @@ public class CyclesTheme {
                     System.out.printf("%4d", (i - 1) * j);
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }
