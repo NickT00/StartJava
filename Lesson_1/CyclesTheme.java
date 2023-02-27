@@ -139,24 +139,22 @@ public class CyclesTheme {
 
         System.out.println("\n9. Определение, является ли число счастливым");
         num = 837_990;
-        int firstDigits = num % 1000;
-        int lastDigits = num / 1000;
-        int tempFirstDigits = firstDigits;
-        int tempLastDigits = lastDigits;
+        int rightHalfNum = num % 1000;
+        int leftHalfHum = num / 1000;
+        int copyRightHalfNum = rightHalfNum;
+        int copyLeftHalfHum = leftHalfHum;
         int sum1 = 0;
         int sum2 = 0;
-        int digit1;
-        int digit2;
         for(int i = 0; i < 3; i++) {
-            digit1 = firstDigits % 10;
-            firstDigits /= 10;
-            sum1 += digit1;
-            digit2 = lastDigits % 10;
-            lastDigits /= 10;
-            sum2 += digit2;
+            int digit = rightHalfNum % 10;
+            rightHalfNum /= 10;
+            sum1 += digit;
+            digit = leftHalfHum % 10;
+            leftHalfHum /= 10;
+            sum2 += digit;
         }
-        System.out.println("Sum of the digits " + tempFirstDigits + " = " + sum1 
-                + "\nSum of the digits " + tempLastDigits + " = " + sum2);
+        System.out.println("Sum of the digits " + copyRightHalfNum + " = " + sum1 
+                + "\nSum of the digits " + copyLeftHalfHum + " = " + sum2);
         if(sum1 == sum2) {
             System.out.println("This number is lucky");
         } else {
