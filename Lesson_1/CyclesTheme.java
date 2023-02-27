@@ -39,10 +39,9 @@ public class CyclesTheme {
 
         System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр");
         int num = 1234;
-        int digit;
         int sumDigits = 0;
         while(num > 0) {
-            digit = num % 10;
+            int digit = num % 10;
             System.out.print(digit);
             sumDigits += digit;
             num /= 10;
@@ -59,7 +58,7 @@ public class CyclesTheme {
                 counter = 1;
             }
         }
-        if(counter < 5 & counter != 1) {
+        if(counter != 1 && counter < 5) {
             for(int i = 0; i <= (5 - counter); i++)
                 System.out.printf("%4d", 0);
         }
