@@ -11,7 +11,7 @@ public class CyclesTheme {
                 sumOdd += counter;
             }
             counter++;
-        } while(counter == 21);
+        } while(counter <= 21);
         System.out.println("In the interval [-10, 21] sum of even numbers = " 
                 + sumEven + ", but odd numbers = " + sumOdd);
 
@@ -19,16 +19,18 @@ public class CyclesTheme {
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
-        int max = num1;
-        int min = num2;
-        if(num2 > num3 & num2 > num1) {
-            max = num2;
-        } else if(num3 > num1) {
+        int max = num2;
+        int min = num1;
+        if(num1 > max) {
+            max = num1;
+        } 
+        if(num3 > max) {
             max = num3;
-        }
-        if(num1 < num2 & num1 < num3) {
-            min = num1;
-        } else if(num3 < num2) {
+        } 
+        if(num2 < min) {
+            min = num2;
+        } 
+        if(num3 < min) {
             min = num3;
         }
         for(int i = max - 1; i > min; i--) {
