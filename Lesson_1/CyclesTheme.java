@@ -163,26 +163,24 @@ public class CyclesTheme {
 
         System.out.println("\n10. Вывод таблицы умножения Пифагора");
         System.out.println("\n           ТАБЛИЦА   ПИФАГОРА\n");
-        for(int i = 1; i <= 10; i++) {
+        for(int i = 1; i < 10; i++) {
+            if(i == 1) {
+                System.out.printf("%4s", "|");
+            } else {
+                System.out.printf("%3d", i);
+            }
+        }
+        System.out.println();
+        for(int i = 1; i < 11; i++) {
+            System.out.printf("%s", "___");
+        }
+        System.out.println();
+        for(int i = 2; i <= 9; i++) {
             for(int j = 1; j <= 9; j++) {
-                if(i == 1) {
-                    if(j == 1) {
-                        System.out.printf("%5s", "|");
-                    } else {
-                        System.out.printf("%4d", i * j);
-                    }
-                } else if(i == 2) { 
-                    System.out.printf("%s", "____");
-                } else if(i == 3){
-                    if(j == 2) {
-                        System.out.printf("%s", "|");
-                    }
-                    System.out.printf("%4d", (i - 1) * j);
+                if(j == 1) {
+                    System.out.printf("%2d %1s", i, "|");
                 } else {
-                    if(j == 2) {
-                        System.out.printf("%s", "|");
-                    }
-                    System.out.printf("%4d", (i - 1) * j);
+                    System.out.printf("%3d", i * j);
                 }
             }
             System.out.println();
