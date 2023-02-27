@@ -99,8 +99,8 @@ public class CyclesTheme {
             amountStrings--;
             stringLength = amountStrings;
         }
-
-        /* Doesn't work, cannot make reverse outprint
+        System.out.println();
+        // Doesn't work, cannot make reverse outprint
         amountStrings = 1;
         int symbols;
         do {
@@ -111,7 +111,7 @@ public class CyclesTheme {
             } while(symbols <= amountStrings);
             System.out.println("");
             amountStrings++;
-        } while(amountStrings <= 3);*/
+        } while(amountStrings <= 3);
 
         System.out.println("\n7. Отображение ASCII-символов");
         System.out.println("Dec Char");
@@ -162,7 +162,7 @@ public class CyclesTheme {
         }
 
         System.out.println("\n10. Вывод таблицы умножения Пифагора");
-        System.out.println("\n           ТАБЛИЦА   ПИФАГОРА\n");
+        System.out.println("\n       ТАБЛИЦА   ПИФАГОРА\n");
         for(int i = 1; i < 10; i++) {
             if(i == 1) {
                 System.out.printf("%4s", "|");
