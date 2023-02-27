@@ -126,16 +126,15 @@ public class CyclesTheme {
         num = 1_234_321;
         int reverseNum = 0;
         copyNum = num;
-        int reverseTemp = 0;
         while(num > 0) {
-            reverseTemp = num % 10;
-            reverseNum = (reverseNum * 10) + reverseTemp;
+            int digit = num % 10;
+            reverseNum = (reverseNum * 10) + digit;
             num /= 10;
         }
         if(copyNum == reverseNum) {
-            System.out.println("The Number " + copyNum + " is a polindrom");
+            System.out.println("The Number " + copyNum + " is a polindrome");
         } else {
-            System.out.println("The Number " + copyNum + " is not a polindrom");
+            System.out.println("The Number " + copyNum + " is not a polindrome");
         }
 
         System.out.println("\n9. Определение, является ли число счастливым");
