@@ -88,6 +88,7 @@ public class CyclesTheme {
             }
             System.out.println();
         }
+
         int amountStrings = 5;
         int stringLength = 5;
         while(amountStrings != 0) {
@@ -99,6 +100,7 @@ public class CyclesTheme {
             amountStrings--;
             stringLength = amountStrings;
         }
+
         System.out.println();
         // Doesn't work, cannot make reverse outprint
         amountStrings = 1;
@@ -132,29 +134,29 @@ public class CyclesTheme {
             num /= 10;
         }
         if(copyNum == reverseNum) {
-            System.out.println("The Number " + copyNum + " is a polindrome");
+            System.out.println("The Number " + copyNum + " is a palindrome");
         } else {
-            System.out.println("The Number " + copyNum + " is not a polindrome");
+            System.out.println("The Number " + copyNum + " is not a palindrome");
         }
 
         System.out.println("\n9. Определение, является ли число счастливым");
         num = 837_990;
         int rightHalfNum = num % 1000;
-        int leftHalfHum = num / 1000;
+        int leftHalfNum = num / 1000;
         int copyRightHalfNum = rightHalfNum;
-        int copyLeftHalfHum = leftHalfHum;
+        int copyLeftHalfNum = leftHalfNum;
         int sum1 = 0;
         int sum2 = 0;
         for(int i = 0; i < 3; i++) {
             int digit = rightHalfNum % 10;
             rightHalfNum /= 10;
             sum1 += digit;
-            digit = leftHalfHum % 10;
-            leftHalfHum /= 10;
+            digit = leftHalfNum % 10;
+            leftHalfNum /= 10;
             sum2 += digit;
         }
         System.out.println("Sum of the digits " + copyRightHalfNum + " = " + sum1 
-                + "\nSum of the digits " + copyLeftHalfHum + " = " + sum2);
+                + "\nSum of the digits " + copyLeftHalfNum + " = " + sum2);
         if(sum1 == sum2) {
             System.out.println("This number is lucky");
         } else {
