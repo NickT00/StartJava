@@ -5,6 +5,14 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
+        do {
+            String decision = "yes";
+            System.out.println("Do you want to continue?");
+            decision = scanner.nextLine();
+            if(decision.equalsIgnoreCase("no")) {
+                break;
+            }
+        } while(true);
         System.out.println("Enter the first number");
         calculator.setNum1(scanner.nextInt());
         System.out.println("Enter the sign of mathematical operation");
@@ -18,5 +26,6 @@ public class CalculatorTest {
         }
         System.out.println("Enter the second number");
         calculator.setNum2(scanner.nextInt());
+        System.out.println("Result " + calculator.calculate());
     }
 }
