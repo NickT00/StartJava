@@ -5,14 +5,15 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
-        do {
-            System.out.println("Enter the first number:");
+        while(true) {
+            System.out.print("Enter the first number: ");
             calculator.setNum1(scanner.nextInt());
-            System.out.println("Enter the sign of mathematical operation:");
+            System.out.print("Enter the sign of mathematical operation: ");
             calculator.setSign(scanner.next().charAt(0));
-            System.out.println("Enter the second number:");
+            System.out.print("Enter the second number: ");
             calculator.setNum2(scanner.nextInt());
-            System.out.println("Result\n" + calculator.calculate());
+            System.out.println("Result: " + calculator.calculate());
+            scanner.nextLine();
             while(true) {
                 System.out.println("Do you want to continue calculating? [yes/no]");
                 String decision = scanner.nextLine();
@@ -22,6 +23,6 @@ public class CalculatorTest {
                     System.exit(0);
                 }
             }
-        } while(true);
+        }
     }
 }

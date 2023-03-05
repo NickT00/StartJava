@@ -33,6 +33,7 @@ public class Calculator {
                 if(sign != '+' && sign != '-' && sign != '*' && sign != '/' && sign != '^' 
                     && sign != '%') {
                     System.out.println("You should enter '+', '-', '*', '/', '^', '%'");
+                    System.out.print("Enter the sign of mathematical operation: ");
                     sign = scanner.next().charAt(0);
                 } else {
                     break;
