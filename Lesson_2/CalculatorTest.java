@@ -6,30 +6,33 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
         do {
-            char sign = 'a';
             System.out.println("Enter the first number");
             calculator.setNum1(scanner.nextInt());
             System.out.println("Enter the sign of mathematical operation");
-            calculator.setSign(scanner.next().charAt(0));
-            sign = calculator.getSign();
-            while(sign != '+' && sign != '-' && sign != '*' && sign != '/' && sign != '^' 
-                    && sign != '%') {
-                System.out.println("You should enter signs: '+', '-', '*', '/', '^', '%'");
+            calculator.setSign('a');
+            char sign = calculator.getSign();
+            while(true) {
                 calculator.setSign(scanner.next().charAt(0));
                 sign = calculator.getSign();
+                if(sign != '+' && sign != '-' && sign != '*' && sign != '/' && sign != '^' 
+                    && sign != '%') {
+                    System.out.println("You should enter '+', '-', '*', '/', '^', '%'");
+                } else {
+                    break;
+                }
             }
             System.out.println("Enter the second number");
             calculator.setNum2(scanner.nextInt());
             System.out.println("Result " + calculator.calculate());
-            do {
-                System.out.println("Do you want to continue?");
+            while(true) {
+                System.out.println("Do you want to continue? yes/no");
                 String decision = scanner.nextLine();
                 if(decision.equalsIgnoreCase("yes")) {
                     break;
                 } else if(decision.equalsIgnoreCase("no")) {
                     System.exit(0);
                 }
-            } while(true);
+            }
         } while(true);
     }
 }

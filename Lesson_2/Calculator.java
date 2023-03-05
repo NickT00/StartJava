@@ -28,9 +28,7 @@ public class Calculator {
     }
 
     public void setSign(char sign) {
-        if(sign == '+' || sign == '-' || sign == '*' || sign == '/' || sign == '^' || sign == '%') {
-            this.sign = sign;
-        }
+        this.sign = sign;
     }
 
     public int getResult() {
