@@ -5,7 +5,8 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
-        while(true) {
+        String decision = "yes";
+        while(decision.equalsIgnoreCase("yes")) {
             System.out.print("Enter the first number: ");
             calculator.setNum1(scanner.nextInt());
             System.out.print("Enter the sign of mathematical operation: ");
@@ -14,15 +15,10 @@ public class CalculatorTest {
             calculator.setNum2(scanner.nextInt());
             System.out.println("Result: " + calculator.calculate());
             scanner.nextLine();
-            while(true) {
+            do {
                 System.out.println("Do you want to continue calculating? [yes/no]");
-                String decision = scanner.nextLine();
-                if(decision.equalsIgnoreCase("yes")) {
-                    break;
-                } else if(decision.equalsIgnoreCase("no")) {
-                    System.exit(0);
-                }
-            }
+                decision = scanner.nextLine();
+            } while(!decision.equalsIgnoreCase("no") && !decision.equalsIgnoreCase("yes"));
         }
     }
 }
