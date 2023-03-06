@@ -42,37 +42,24 @@ public class Calculator {
         this.sign = sign;
     }
 
-    public int getResult() {
-        return result;
-    }
-
-    public void setResult(int result) {
-        this.result = result;
-    }
-
     public int calculate() {
         switch(sign) {
             case '+' :
-                result = num1 + num2;
-                break;
+                return result = num1 + num2;
             case '-' :
-                result = num1 - num2;
-                break;
+                return result = num1 - num2;
             case '*' :
-                result = num1 * num2;
-                break;
+                return result = num1 * num2;
             case '/' :
-                result = num1 / num2;
-                break;
+                return result = num1 / num2;
             case '^' :
                 result = 1;
                 for(int i = 0; i < num2; i++) {
                     result *= num1;
                 }
-                break;
+                return result;
             default:
-                result = num1 % num2;
+                return result = num1 % num2;
         }
-        return result;
     }
 }
