@@ -4,6 +4,7 @@ public class Calculator {
     private int num2;
     private char sign;
     private int result;
+    private boolean isSignFit;
 
     public int getNum1() {
         return num1;
@@ -28,9 +29,15 @@ public class Calculator {
     public void setSign(char sign) {
         if(sign != '+' && sign != '-' && sign != '*' && sign != '/' && sign != '^' && sign != '%') {
             System.out.println("You should enter '+', '-', '*', '/', '^', '%'");
+            isSignFit = false;
         } else {
             this.sign = sign;
+            isSignFit = true;
         }
+    }
+
+    public boolean getIsSignFit() {
+        return isSignFit;
     }
 
     public int calculate() {
