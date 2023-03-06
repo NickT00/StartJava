@@ -1,12 +1,9 @@
-import java.util.Scanner;
-
 public class Calculator {
 
     private int num1;
     private int num2;
     private char sign;
     private int result;
-    Scanner scanner = new Scanner(System.in);
 
     public int getNum1() {
         return num1;
@@ -29,17 +26,11 @@ public class Calculator {
     }
 
     public void setSign(char sign) {
-        while(true) {
-                if(sign != '+' && sign != '-' && sign != '*' && sign != '/' && sign != '^' 
-                    && sign != '%') {
-                    System.out.println("You should enter '+', '-', '*', '/', '^', '%'");
-                    System.out.print("Enter the sign of mathematical operation: ");
-                    sign = scanner.next().charAt(0);
-                } else {
-                    break;
-                }
-            }
-        this.sign = sign;
+        if(sign != '+' && sign != '-' && sign != '*' && sign != '/' && sign != '^' && sign != '%') {
+            System.out.println("You should enter '+', '-', '*', '/', '^', '%'");
+        } else {
+            this.sign = sign;
+        }
     }
 
     public int calculate() {
