@@ -2,11 +2,21 @@ public class Jaeger {
 
     private String name;
     private String origin;
-    private int height;
     private int weight;
     private int speed;
     private int strength;
-    private int armor;
+    private int health;
+
+    public Jaeger() {
+    }
+
+    public Jaeger(String name, String origin, int weight, int speed, int strength) {
+        this.name = name;
+        this.origin = origin;
+        this.weight = weight;
+        this.speed = speed;
+        this.strength = strength;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -22,14 +32,6 @@ public class Jaeger {
 
     public String getOrigin() {
         return origin;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getHeight() {
-        return height;
     }
 
     public void setWeight(int weight) {
@@ -56,11 +58,21 @@ public class Jaeger {
         return strength;
     }
 
-    public void setArmor(int armor) {
-        this.armor = armor;
+    public void move() {
+        if(speed < 5) {
+            System.out.println(name + " moving slowly");
+        } else {
+            System.out.println(name + " moving");
+        }
     }
 
-    public int getArmor() {
-        return armor;
+    public void shoot() {
+        if(strength == 10) {
+            System.out.println(name + " lunches a rocket");
+            weight -= 3;
+        } else {
+            System.out.println(name + " shooting");
+            weight -= 2;
+        }
     }
 }
