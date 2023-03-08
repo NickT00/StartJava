@@ -9,10 +9,11 @@ public class CalculatorTest {
         while(decision.equalsIgnoreCase("yes")) {
             System.out.print("Enter the first number: ");
             calculator.setNum1(scanner.nextInt());
+            boolean isSignFit;
             do {
                 System.out.print("Enter the sign of mathematical operation: ");
-                calculator.setSign(scanner.next().charAt(0));
-            } while(!calculator.getIsSignFit());
+                isSignFit = calculator.setSign(scanner.next().charAt(0));
+            } while(!isSignFit);
             System.out.print("Enter the second number: ");
             calculator.setNum2(scanner.nextInt());
             System.out.println("Result: " + calculator.calculate());
