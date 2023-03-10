@@ -10,4 +10,8 @@ public class Player {
     public String getName() {
         return name;
     }
+
+    public void setPlayerNum(int num) {
+        playerNum = num;
+    }
 }
