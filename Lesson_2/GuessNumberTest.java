@@ -9,25 +9,32 @@ public class GuessNumberTest {
         System.out.print("Player two, what's your name? ");
         Player player2 = new Player(scanner.nextLine());
         GuessNumber game = new GuessNumber();
-        game.guess();
-        System.out.print("The game is beginning! " + player1.getName() 
-                + " guess a number from 1 to 100. ");
-        game.setPlayerNum1(scanner.nextInt());
-        System.out.print(player2.getName() + " guess a number from 1 to 100. ");
-        game.setPlayerNum2(scanner.nextInt());
-        while(true) {
-            game.startPlayer1();
-            if(game.startPlayer1()) {
-                System.out.println(player1.getName() + " won!");
-                break;
-            } 
-            game.startPlayer2();
-            if(game.startPlayer2()) {
-                System.out.println(player2.getName() + " won!");
-                break;
+        String decision = "yes";
+        while(decision.equalsIgnoreCase("yes")) {
+            System.out.println("The game is beginning! The computer guesses a number.");
+            game.guess();
+            while(true) {
+                System.out.print(player1.getName() + " guess a number from 1 to 100. ");
+                game.setPlayerNum1(scanner.nextInt());
+                game.startPlayer1();
+                if(game.startPlayer1()) {
+                    System.out.println(player1.getName() + " won!");
+                    break;
+                }
+                System.out.print(player2.getName() + " guess a number from 1 to 100. ");
+                game.setPlayerNum2(scanner.nextInt());
+                game.startPlayer2();
+                if(game.startPlayer2()) {
+                    System.out.println(player2.getName() + " won!");
+                    break;
+                }
+                System.out.println("Nobody wins");
             }
-            System.out.println("Nobody wins\n" + player1.getName() 
-                    + " try to guess another number. ");
+            scanner.nextLine();
+            do {
+                System.out.println("Do you want to continue the game? [yes/no]");
+                decision = scanner.nextLine();
+            } while(!decision.equalsIgnoreCase("no") && !decision.equalsIgnoreCase("yes"));
         }
     }
 }

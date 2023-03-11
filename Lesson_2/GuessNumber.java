@@ -13,9 +13,7 @@ public class GuessNumber {
     }
 
     public void guess() {
-        do {
-            computerNum = (int) Math.random() * 100;
-        } while(computerNum == 0);
+        computerNum = ((int) (Math.random() * 100)) + 1;
     }
 
     public boolean startPlayer1() {
@@ -26,7 +24,6 @@ public class GuessNumber {
             System.out.println("The number " + playerNum1 + " is bigger than computer's number");
             return false;
         } else {
-            System.out.println("Player1 won!");
             return true;
         }
     }
@@ -39,7 +36,6 @@ public class GuessNumber {
             System.out.println("The number " + playerNum2 + " is bigger than computer's number");
             return false;
         } else {
-            System.out.println("Player2 won!");
             return true;
         }
     }
