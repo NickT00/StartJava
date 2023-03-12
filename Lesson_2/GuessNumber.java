@@ -1,15 +1,12 @@
 public class GuessNumber {
 
     private int computerNum;
-    private int playerNum1;
-    private int playerNum2;
+    private Player player1;
+    private Player player2;
 
-    public void setPlayerNum1(int num) {
-        playerNum1 = num;
-    }
-
-    public void setPlayerNum2(int num) {
-        playerNum2 = num;
+    public GuessNumber(Player player1, Player player2) {
+        this.player1 = player1;
+        this.player2 = player2;
     }
 
     public void guess() {
@@ -17,25 +14,31 @@ public class GuessNumber {
     }
 
     public boolean startPlayer1() {
-        if(playerNum1 < computerNum) {
-            System.out.println("The number " + playerNum1 + " is less than computer's number");
+        if(player1.getNum() < computerNum) {
+            System.out.println("The number " + player1.getNum() 
+                    + " is less than computer's number");
             return false;
-        } else if(playerNum1 > computerNum) {
-            System.out.println("The number " + playerNum1 + " is bigger than computer's number");
+        } else if(player1.getNum() > computerNum) {
+            System.out.println("The number " + player1.getNum() 
+                    + " is bigger than computer's number");
             return false;
         } else {
+            System.out.println(player1.getName() + " won!");
             return true;
         }
     }
 
     public boolean startPlayer2() {
-        if(playerNum2 < computerNum) {
-            System.out.println("The number " + playerNum2 + " is less than computer's number");
+        if(player2.getNum() < computerNum) {
+            System.out.println("The number " + player2.getNum() 
+                    + " is less than computer's number");
             return false;
-        } else if(playerNum2 > computerNum) {
-            System.out.println("The number " + playerNum2 + " is bigger than computer's number");
+        } else if(player2.getNum() > computerNum) {
+            System.out.println("The number " + player2.getNum() 
+                    + " is bigger than computer's number");
             return false;
         } else {
+            System.out.println(player2.getName() + " won!");
             return true;
         }
     }
