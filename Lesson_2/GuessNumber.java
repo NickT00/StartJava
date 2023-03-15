@@ -17,7 +17,7 @@ public class GuessNumber {
         System.out.println("The game is beginning! The computer guesses a number.");
         computerNum = ((int) (Math.random() * 100)) + 1;
         while(true) {
-            System.out.print(player1.getName() + " guess a number from 1 to 100. ");
+            System.out.print("\n" + player1.getName() + " guess a number from 1 to 100. ");
             player1.setNum(scanner.nextInt());
             if(player1.getNum() < computerNum) {
                 System.out.println("The number " + player1.getNum() 
@@ -29,7 +29,7 @@ public class GuessNumber {
                 System.out.println(player1.getName() + " won!");
                 break;
             }
-            System.out.print(player2.getName() + " guess a number from 1 to 100. ");
+            System.out.print("\n" + player2.getName() + " guess a number from 1 to 100. ");
             player2.setNum(scanner.nextInt());
             if(player2.getNum() < computerNum) {
                 System.out.println("The number " + player2.getNum() 
