@@ -1,4 +1,7 @@
-public class Калькулятор {
+package com.startjava.lesson_1.final_;
+
+public class Calculator {
+    
     public static void main(String[] args) {
         int num1 = 100;
         int num2 = 9;
