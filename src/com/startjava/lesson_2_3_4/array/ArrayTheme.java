@@ -16,5 +16,12 @@ public class ArrayTheme {
             numbers[i] = temps[i];
             System.out.print(numbers[i] + " ");
         }
+
+        System.out.println("\n\n2. Вывод произведения элементов массива");
+        int[] intArr = new int[10];
+        for (int i = 0; i < intArr.length; i++) {
+            intArr[i] = i;
+            System.out.println(intArr[i]);
+        }
     }
 }
